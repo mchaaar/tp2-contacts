@@ -95,8 +95,10 @@ Utilisez XAMPP ou tout autre serveur local compatible avec PHP et MySQL.
 *(si ce n'est pas déjà le cas, déplacez les fichiers du projet dans le répertoire htdocs)*
 
 5. **Accédez à l'application** :
-Ouvrez votre navigateur et accédez à :
+Ouvrez votre navigateur et accédez à :  
+```
 localhost/tp2-contacts
+```
 
 ## Screenshots
 **Voici deux captures d'écran qui illustrent la page d'ajout de contact ainsi que la page de modification de contact.**
