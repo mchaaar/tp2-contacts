@@ -13,7 +13,7 @@ Il permet d'effectuer des opérations CRUD (Create, Read, Update, Delete) sur un
 4. [Descriptions des fichiers](#descriptions-des-fichiers)
 5. [Structure de la base de données](#structure-de-la-base-de-données)
 6. [Installation](#installation)
-7. [Sécurité et validation des données](#sécurité-et-validation-des-données)
+7. [Screenshots](#screenshots)
 
 ---
 
@@ -64,7 +64,7 @@ La structure de la base de données est définie dans le fichier `init.sql`, qui
 - **Table** : `contacts`
   - `id` (INT, AUTO_INCREMENT, PRIMARY KEY) : Identifiant unique du contact.
   - `name` (VARCHAR(100), NOT NULL) : Nom du contact.
-  - `email` (VARCHAR(100), NOT NULL, UNIQUE) : Adresse email, avec contrainte d'unicité.
+  - `email` (VARCHAR(100), NOT NULL) : Adresse email.
   - `telephone` (VARCHAR(15), NOT NULL) : Numéro de téléphone du contact.
 
 ---
@@ -73,5 +73,41 @@ La structure de la base de données est définie dans le fichier `init.sql`, qui
 Pour installer et exécuter ce projet sur votre environnement local :
 
 1. **Clonez le dépôt depuis GitHub** :
+  *(si possble directement dans le dossier htdocs de XAMPP)*
    ```bash
-   git clone <url-du-repo>
+     git clone git@github.com:mchaaar/tp2-contacts.git
+   ```
+
+3. **Configurez la base de données** :
+Importez le fichier init.sql dans votre serveur MySQL via phpMyAdmin ou tout autre outil de gestion de base de données.  
+Vérifiez que la base de données contacts_db et la table contacts ont été créées correctement.  
+
+4. **Configurez la connexion à la base de données** :
+Ouvrez le fichier includes/db.php.  
+Remplacez les informations suivantes par vos propres paramètres MySQL si besoin.  
+*(par défaut XAMPP laisse sans mot de passe, ces params devraient marcher)*  
+```php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbName = "contacts_db";
+```
+
+4. **Lancez votre serveur local** :
+Utilisez XAMPP ou tout autre serveur local compatible avec PHP et MySQL.  
+*(si ce n'est pas déjà le cas, déplacez les fichiers du projet dans le répertoire htdocs)*
+
+5. **Accédez à l'application** :
+Ouvrez votre navigateur et accédez à :
+localhost/tp2-contacts
+
+## Screenshots
+**Voici deux captures d'écran qui illustrent la page d'ajout de contact ainsi que la page de modification de contact.**
+
+#### Ajout de contact :
+
+![capture d'écran de la page d'ajout de contact](https://github.com/mchaaar/tp2-contacts/blob/main/github/gestionDesContactsHome.png)
+
+#### Modification de contact :
+
+![capture d'écran de la page de modification de contact](https://github.com/mchaaar/tp2-contacts/blob/main/github/gestionDesContactsModification.png))
